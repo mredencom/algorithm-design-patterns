@@ -63,6 +63,7 @@ func (a *Array) Delete(idx uint) (interface{}, error) {
 		return nil, errors.New("数组越界")
 	}
 	val := a.data[idx]
+	// 把数据元素前移
 	for i := idx; i < a.len-1; i++ {
 		a.data[i] = a.data[i+1]
 	}
