@@ -62,5 +62,6 @@ func (s *SingleLinkList) InsertBefore(n *Node, v interface{}) bool {
 	newNode := NewNode(v)
 	head.next = newNode
 	newNode.next = cur
+	s.len++
 	return true
 }
